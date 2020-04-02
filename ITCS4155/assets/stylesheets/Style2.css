@@ -1,0 +1,171 @@
+
+.usernavbar {
+	overflow: hidden;
+	background-color: #87CEFA;
+	
+}
+
+.usernavbar a{
+	float: right;
+	color: white;
+	text-align: center;
+	padding: 14px 40px;
+	text-decoration: none;
+	font-size: 20px;
+}
+/* Hovering over the navigation */
+.usernavbar a:hover{
+	background-color: #0000CD;
+	color: white;
+}
+
+/* Styling the header */
+header {
+  padding: 100px 50px 75px 100px;
+  font-size: 50px;
+  text-align: center;
+  letter-spacing: 40px;
+}
+
+.homehead{
+    position: absolute;
+    top: 20px;
+    right: 700px;
+}
+
+.caption{
+    font-size: 35px;
+}
+
+#location{
+    padding: 16px 20px;
+    border: none;
+    border-radius: 4px;
+    background-color: #ADD8E6;
+}
+
+.recomLocation{
+  position: absolute;
+  top: 400px;
+}
+#classify{
+    padding: 16px 20px;
+    border: none;
+    border-radius: 4px;
+    background-color: #F5FFFA;
+}
+
+.homesub{
+    background-color: #ADD8E6;
+    border: none;
+      color: black;
+      text-align: center;
+      text-decoration: none;
+      font-size: 25px;
+      cursor: pointer;
+
+}
+
+
+.first{
+  position: absolute;
+  top: 340px;
+}
+
+.second{
+    position: absolute;
+    top: 470px;
+}
+
+.hometab tr:nth-child(even){
+    background-color: #f2f2f2;
+}
+
+.homeright{
+  position: absolute;
+  right: 40px;
+  top: 450px;
+  width: 30%;
+}
+
+
+/* table style */
+table{
+    font-family: arial, sans-serif;
+    text-align: center;
+    position: absolute;
+    right: 800px;
+    top: 240px;
+
+}
+/* inside the table style */
+table, th, td {
+  border: 1px solid black;
+}
+
+td {
+    height: 50px;
+    vertical-align: bottom;
+  }
+
+
+.thebuild{
+  text-align: center;
+
+}
+
+.theclass{
+  text-align: center;
+}
+
+.recomLeft{
+  text-align: center;
+}
+
+.listrecom{
+  text-align: center;
+}
+
+.Rbutton{
+  background-color: #7CFC00;
+  border: none;
+  color: black;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 25px;
+  margin: 20px 20px;
+  cursor: pointer;
+  border-radius: 12px;
+  padding: 35px;
+}
+
+.bottomtext{
+  text-align: center;
+  font-size: 30px;
+}
+
+ /* Always set the map height explicitly to define the size of the div
+       * element that contains the map. */
+       #map {
+        height: 100%;
+      }
+      /* Optional: Makes the sample page fill the window. */
+      .mapsbody {
+        height: 100%;
+        margin: 0;
+        padding: 0;
+      }
+      #floating-panel {
+        position: absolute;
+        top: 10px;
+        left: 25%;
+        z-index: 5;
+        background-color: #fff;
+        padding: 5px;
+        border: 1px solid #999;
+        text-align: center;
+        font-family: 'Roboto','sans-serif';
+        line-height: 30px;
+        padding-left: 10px;
+      }

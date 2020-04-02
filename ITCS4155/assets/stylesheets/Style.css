@@ -1,0 +1,127 @@
+@import url('https://fonts.googleapis.com/css?family=Roboto');
+
+*{
+    margin: 0;
+    padding: 0;
+    user-select: none;
+}
+
+body{
+    background: #e5e5e5;
+    font-family: 'Roboto', sans-serif ;
+}
+
+.container{
+    width: 500px;
+    margin: 100px auto;
+}
+
+.signup,
+.login{
+    width: 50%;
+    background: white;
+    height: 70px;
+    float: left;
+    text-align: center;
+    line-height: 60px;
+    text-transform: uppercase;
+}
+
+.signup-form,
+.login-form{
+    background: white;
+    box-sizing: border-box;
+    padding: 40px;
+    clear: both;
+    width: 100%;
+    height: 400px;
+
+}
+
+.input{
+    width: 100%;
+    box-sizing: border-box;
+    padding: 20px;
+    margin-bottom: 25px;
+    border: 2px solid lightgray;
+    color: black;
+    font-size: 20px;
+    outline: none;
+    transition: all 0.5s ease;
+}
+
+.input:focus{
+    border: 2px solid black;
+}
+
+.btn{
+    width: 60%;
+    background: lightskyblue;
+    text-align: center;
+    line-height: 60px;
+    text-transform: uppercase;
+    font-weight: bold;
+    color: #ffff;
+    letter-spacing: 1px;
+    cursor: pointer;
+    margin-bottom: 30px;
+}
+span a{
+    text-decoration: none;
+    color: black;
+}
+
+.usernavbar {
+	overflow: hidden;
+	background-color: #87CEFA;
+	
+}
+
+.usernavbar a{
+	float: right;
+	color: white;
+	text-align: center;
+	padding: 14px 40px;
+	text-decoration: none;
+	font-size: 20px;
+}
+/* Hovering over the navigation */
+.usernavbar a:hover{
+	background-color: #0000CD;
+	color: white;
+}
+
+.headclass{
+    position: absolute;
+    right: 380px;
+    top: 80px;
+}
+
+.personal{
+    position: absolute;
+    right: 860px;
+    top: 470px;
+}
+
+.classification{
+    position: absolute;
+    right: 40px;
+    top:170px;
+}
+#classify{
+    padding: 100px 400px;
+    border: none;
+    border-radius: 4px;
+    background-color: #ADD8E6;
+    font-size: 40px;
+  }
+
+  .schedule{
+    width: 40%;
+    padding: 12px 20px;
+    margin: 8px 0;
+    display: inline-block;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+  }

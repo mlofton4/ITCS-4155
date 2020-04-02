@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>ParkEasy</title>
+    <meta name="description" content="Home"/>
+	<meta charset="UTF-8">
+	<link rel="stylesheet" type="text/css" href="../assets/stylesheets/Style2.css" />
+
+
+</head>
+<body>
+<!-- Creates the user navigation bar -->
+<!-- Creates the user navigation bar -->
+<div class="usernavbar">
+    <a href="/login">Login</a>
+    <a href="/signup">Sign Up</a>
+    <a href="/">Home</a>
+  </div>
+<main>
+<header class="homehead">ParkEasy</header><br>
+
+<h2 class="first">Where do you wish to go?</h2>
+<form class="recomLocation" action="/recommendations" method="POST">
+    <label for="location">Location</label>
+        <select name="location" id="location">
+            <option value="woodward" selected>Woodward</option>
+            <option value="chhs">CHHS</option>
+            <option value="coed">COED</option>
+            <option value="atkins">Atkins Library</option>
+            <option value="bioinformatic">Bioinformatic</option>
+            <option value="barnard">Barnard</option>
+            <option value="burson">Burson</option>
+            <option value="cameron">Cameron</option>
+            <option value="colvard">Colvard</option>
+            <option value="cone">Cone</option>
+            <option value="denny">Denny</option>
+            <option value="duke">Duke Centennial</option>
+            <option value="epic">EPIC</option>
+            <option value="fret">Fretwell</option>
+            <option value="friday">Friday</option>
+            <option value="garinger">Garinger</option>
+            <option value="grigg">Grigg</option>
+            <option value="belk">Belk Gym</option>
+            <option value="band">Band Center</option>
+            <option value="kennedy">Kennedy</option>
+            <option value="macy">Macy</option>
+            <option value="mceniry">McEniry</option>
+            <option value="memorial">Memorial Hall</option>
+            <option value="robinson">Robinson Hall</option>
+            <option value="rowe">Rowe</option>
+            <option value="smith">Smith</option>
+            <option value="storrs">Storrs</option>
+            <option value="win">Winningham</option>
+        </select><br><br><br><br><br>
+        <label for="classify">Classification</label>
+        <select name="classify" id="classify">
+            <option value="residential" selected>Residential</option>
+            <option value="faculty">Faculty</option>
+            <option value="commuter">Commuter</option>
+            <option value="visitor">Visitor</option>
+        </select><br><br><br>
+        <input type="submit" class="homesub" value="Click here to get our recommendation!!">
+</form>
+<h2 class="second">What's your Classification?</h2>
+
+<table class="hometab">
+    <caption class="caption">Parking Availability</caption>
+    <tr>
+        <th>Parking Options</th>
+        <th>Availability(How Full The Parking Deck Is)</th>
+    </tr>
+    <%if (typeof my != 'undefined'){ %>
+		<% for(let i=0; i< my.length; i++){ %>
+			<tr>
+				<td><%= my[i]._name %></td>
+                <td><%= my[i]._space%>%</td>
+            </tr>
+        <%}%>
+	<%}%>    
+</table>
+<img src="/assets/images/homeImage.jpg" alt="" class="homeright">
+<p class="datetimeleft"><span id="datetime"></span></p>
+
+
+
+
+</main>
+</body>
+</html>

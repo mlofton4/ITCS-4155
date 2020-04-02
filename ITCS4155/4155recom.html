@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>Recommendations</title>
+    <meta name="description" content="ParkEasy"/>
+	<meta charset="UTF-8">
+	<link rel="stylesheet" type="text/css" href="" />
+
+
+</head>
+<body>
+<!-- Creates the user navigation bar -->
+<div class="usernavbar">
+  <a href="">Login</a>
+  <a href="">Sign Up</a>
+  <a href="">Home</a>
+</div>
+<main>
+<header>Recommendations</header><br>
+
+<h2>Where do you wish to go?</h2>
+<form class="recomLocation" id="building">
+    <label for="location">Location</label>
+        <select name="location" id="location">
+            <option value="woodward" selected>Woodward</option>
+            <option value="chhs">CHHS</option>
+            <option value="coed">COED</option>
+            <option value="atkins">Atkins Library</option>
+            <option value="bioinformatic">Bioinformatic</option>
+            <option value="barnard">Barnard</option>
+            <option value="burson">Burson</option>
+            <option value="cameron">Cameron</option>
+            <option value="colvard">Colvard</option>
+            <option value="cone">Cone</option>
+            <option value="denny">Denny</option>
+            <option value="duke">Duke Centennial</option>
+            <option value="epic">EPIC</option>
+            <option value="fret">Fretwell</option>
+            <option value="friday">Friday</option>
+            <option value="garinger">Garinger</option>
+            <option value="grigg">Grigg</option>
+            <option value="belk">Belk Gym</option>
+            <option value="band">Band Center</option>
+            <option value="kennedy">Kennedy</option>
+            <option value="macy">Macy</option>
+            <option value="mceniry">McEniry</option>
+            <option value="memorial">Memorial Hall</option>
+            <option value="robinson">Robinson Hall</option>
+            <option value="rowe">Rowe</option>
+            <option value="smith">Smith</option>
+            <option value="storrs">Storrs</option>
+            <option value="win">Winningham</option>
+        </select>
+</form>
+<%= var x = document.getElementById('building').selectedIndex %>
+<%= var y = document.getElementById('building').options %>
+<%= global.building = y[x].text %>
+<% if (global.signedin == true) { %>
+    <p>Classification: <%= global.class %></p>
+<%}else{ %>
+    <form class="classRecom" id="classR">
+        <label for="rstudent">Residential Student</label>
+        <input type="radio" id="rstudent" name="rstudent"><br><br>
+        <label for="nstudent">Non-Residential Student</label>
+        <input type="radio" id="nstudent" name="nstudent"><br><br>
+        <label for="faculty">Faculty/Staff</label>
+        <input type="radio" id="faculty" name="faculty"><br><br>
+        <label for="visitor">Visitor</label>
+        <input type="radio" id="visitor" name="visitor"><br><br>
+    </form><br>
+    <%= global.class = document.getElementById('classR').checked %>
+<%} %>
+<h2 class="recomLeft">Recommendations</h2>
+<!-- Recommendations data  -->
+<% if (typeof data != 'undefined') { %>
+    <% for(let i=0; i < data.length; i++){ %>
+        <a href="/maps?ID=<%= data[i]._connectionID %>" class="Englishbutton" role="button"><%= data[i]._name %></a>
+        <br>
+    <%}%>
+<%}%>
+<p class="bottom text">Click an option to see our maps pages that will give you walking time, availability, and more.</p>
+</main>
+
+</body>
+</html>

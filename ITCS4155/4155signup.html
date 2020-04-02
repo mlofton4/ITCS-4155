@@ -1,0 +1,357 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>Sign Up</title>
+    <meta name="description" content="ParkEasy"/>
+	<meta charset="UTF-8">
+	<link rel="stylesheet" type="text/css" href="index.css" />
+
+
+</head>
+<body>
+<!-- Creates the user navigation bar -->
+<div class="usernavbar">
+  <a href="">Login</a>
+  <a href="">Sign Up</a>
+  <a href="">Home</a>
+</div>
+<main>
+<header>Sign Up</header><br>
+ <!--Information needed to get the user's classification-->
+<h2 class="headclass">Choose classification</h2>
+<form class="classification">
+    <label for="rstudent">Residential Student</label>
+    <input type="radio" id="rstudent" name="rstudent"><br><br>
+    <label for="nstudent">Non-Residential Student</label>
+    <input type="radio" id="nstudent" name="nstudent"><br><br>
+    <label for="faculty">Faculty/Staff</label>
+    <input type="radio" id="faculty" name="faculty"><br><br>
+    <label for="visitor">Visitor</label>
+    <input type="radio" id="visitor" name="visitor"><br><br>
+</form><br>
+
+<h2 class="headS">Schedule</h2>
+<form class="schedule">
+     <!--Information needed for class 1-->
+    <fieldset class="class1">
+        <label for="class1">Class 1</label>
+        <input type="text" id="class1" name="class1"><br><br>
+        <label for="monday">Monday</label>
+        <input type="radio" id="monday" name="monday"><br><br>
+        <label for="tuesday">Tuesday</label>
+        <input type="radio" id="tuesday" name="tuesday"><br><br>
+        <label for="wed">Wednesday</label>
+        <input type="radio" id="wed" name="wed"><br><br>
+        <label for="thursday">Thursday</label>
+        <input type="radio" id="thursday" name="thursday"><br><br>
+        <label for="friday">Friday</label>
+        <input type="radio" id="friday" name="friday"><br><br>
+        <label for="saturday">Saturday</label>
+        <input type="radio" id="saturday" name="saturday"><br><br>
+        <label for="classtime">Time of Class:</label>
+        <input type="time" id="classtime" name="classtime">
+        <label for="location">Location</label>
+        <select name="location" id="location">
+            <option value="woodward">Woodward</option>
+            <option value="chhs">CHHS</option>
+            <option value="coed">COED</option>
+            <option value="atkins">Atkins Library</option>
+            <option value="bioinformatic">Bioinformatic</option>
+            <option value="barnard">Barnard</option>
+            <option value="burson">Burson</option>
+            <option value="cameron">Cameron</option>
+            <option value="colvard">Colvard</option>
+            <option value="cone">Cone</option>
+            <option value="denny">Denny</option>
+            <option value="duke">Duke Centennial</option>
+            <option value="epic">EPIC</option>
+            <option value="fret">Fretwell</option>
+            <option value="friday">Friday</option>
+            <option value="garinger">Garinger</option>
+            <option value="grigg">Grigg</option>
+            <option value="belk">Belk Gym</option>
+            <option value="band">Band Center</option>
+            <option value="kennedy">Kennedy</option>
+            <option value="macy">Macy</option>
+            <option value="mceniry">McEniry</option>
+            <option value="memorial">Memorial Hall</option>
+            <option value="robinson">Robinson Hall</option>
+            <option value="rowe">Rowe</option>
+            <option value="smith">Smith</option>
+            <option value="storrs">Storrs</option>
+            <option value="win">Winningham</option>
+        </select>
+    </fieldset>
+     <!--Information needed for class 2-->
+    <fieldset class="class2">
+        <label for="class2">Class 2</label>
+        <input type="text" id="class2" name="class"><br><br>
+        <label for="monday2">Monday</label>
+        <input type="radio" id="monday2" name="monday"><br><br>
+        <label for="tuesday2">Tuesday</label>
+        <input type="radio" id="tuesday2" name="tuesday"><br><br>
+        <label for="wed2">Wednesday</label>
+        <input type="radio" id="wed2" name="wed"><br><br>
+        <label for="thursday2">Thursday</label>
+        <input type="radio" id="thursday2" name="thursday"><br><br>
+        <label for="friday2">Friday</label>
+        <input type="radio" id="friday2" name="friday"><br><br>
+        <label for="saturday2">Saturday</label>
+        <input type="radio" id="saturday2" name="saturday"><br><br>
+        <label for="classtime2">Time of Class:</label>
+        <input type="time" id="classtime2" name="classtime">
+        <label for="location2">Location</label>
+        <select name="location" id="location2">
+            <option value="woodward">Woodward</option>
+            <option value="chhs">CHHS</option>
+            <option value="coed">COED</option>
+            <option value="atkins">Atkins Library</option>
+            <option value="bioinformatic">Bioinformatic</option>
+            <option value="barnard">Barnard</option>
+            <option value="burson">Burson</option>
+            <option value="cameron">Cameron</option>
+            <option value="colvard">Colvard</option>
+            <option value="cone">Cone</option>
+            <option value="denny">Denny</option>
+            <option value="duke">Duke Centennial</option>
+            <option value="epic">EPIC</option>
+            <option value="fret">Fretwell</option>
+            <option value="friday">Friday</option>
+            <option value="garinger">Garinger</option>
+            <option value="grigg">Grigg</option>
+            <option value="belk">Belk Gym</option>
+            <option value="band">Band Center</option>
+            <option value="kennedy">Kennedy</option>
+            <option value="macy">Macy</option>
+            <option value="mceniry">McEniry</option>
+            <option value="memorial">Memorial Hall</option>
+            <option value="robinson">Robinson Hall</option>
+            <option value="rowe">Rowe</option>
+            <option value="smith">Smith</option>
+            <option value="storrs">Storrs</option>
+            <option value="win">Winningham</option>
+        </select>
+    </fieldset>
+     <!--Information needed for class 3-->
+    <fieldset class="class3">
+        <label for="class3">Class 3</label>
+        <input type="text" id="class3" name="class"><br><br>
+        <label for="monday3">Monday</label>
+        <input type="radio" id="monday3" name="monday"><br><br>
+        <label for="tuesday3">Tuesday</label>
+        <input type="radio" id="tuesday3" name="tuesday"><br><br>
+        <label for="wed3">Wednesday</label>
+        <input type="radio" id="wed3" name="wed"><br><br>
+        <label for="thursday3">Thursday</label>
+        <input type="radio" id="thursday3" name="thursday"><br><br>
+        <label for="friday3">Friday</label>
+        <input type="radio" id="friday3" name="friday"><br><br>
+        <label for="saturday3">Saturday</label>
+        <input type="radio" id="saturday3" name="saturday"><br><br>
+        <label for="classtime3">Time of Class:</label>
+        <input type="time" id="classtime3" name="classtime">
+        <label for="location3">Location</label>
+        <select name="location" id="location3">
+            <option value="woodward">Woodward</option>
+            <option value="chhs">CHHS</option>
+            <option value="coed">COED</option>
+            <option value="atkins">Atkins Library</option>
+            <option value="bioinformatic">Bioinformatic</option>
+            <option value="barnard">Barnard</option>
+            <option value="burson">Burson</option>
+            <option value="cameron">Cameron</option>
+            <option value="colvard">Colvard</option>
+            <option value="cone">Cone</option>
+            <option value="denny">Denny</option>
+            <option value="duke">Duke Centennial</option>
+            <option value="epic">EPIC</option>
+            <option value="fret">Fretwell</option>
+            <option value="friday">Friday</option>
+            <option value="garinger">Garinger</option>
+            <option value="grigg">Grigg</option>
+            <option value="belk">Belk Gym</option>
+            <option value="band">Band Center</option>
+            <option value="kennedy">Kennedy</option>
+            <option value="macy">Macy</option>
+            <option value="mceniry">McEniry</option>
+            <option value="memorial">Memorial Hall</option>
+            <option value="robinson">Robinson Hall</option>
+            <option value="rowe">Rowe</option>
+            <option value="smith">Smith</option>
+            <option value="storrs">Storrs</option>
+            <option value="win">Winningham</option>
+        </select>
+    </fieldset>
+     <!--Information needed for class 4-->
+    <fieldset class="class4">
+        <label for="class4">Class 4</label>
+        <input type="text" id="class4" name="class"><br><br>
+        <label for="monday4">Monday</label>
+        <input type="radio" id="monday4" name="monday"><br><br>
+        <label for="tuesday4">Tuesday</label>
+        <input type="radio" id="tuesday4" name="tuesday"><br><br>
+        <label for="wed4">Wednesday</label>
+        <input type="radio" id="wed4" name="wed"><br><br>
+        <label for="thursday4">Thursday</label>
+        <input type="radio" id="thursday4" name="thursday"><br><br>
+        <label for="friday4">Friday</label>
+        <input type="radio" id="friday4" name="friday"><br><br>
+        <label for="saturday4">Saturday</label>
+        <input type="radio" id="saturday4" name="saturday"><br><br>
+        <label for="classtime4">Time of Class:</label>
+        <input type="time" id="classtime4" name="classtime">
+        <label for="location4">Location</label>
+        <select name="location" id="location4">
+            <option value="woodward">Woodward</option>
+            <option value="chhs">CHHS</option>
+            <option value="coed">COED</option>
+            <option value="atkins">Atkins Library</option>
+            <option value="bioinformatic">Bioinformatic</option>
+            <option value="barnard">Barnard</option>
+            <option value="burson">Burson</option>
+            <option value="cameron">Cameron</option>
+            <option value="colvard">Colvard</option>
+            <option value="cone">Cone</option>
+            <option value="denny">Denny</option>
+            <option value="duke">Duke Centennial</option>
+            <option value="epic">EPIC</option>
+            <option value="fret">Fretwell</option>
+            <option value="friday">Friday</option>
+            <option value="garinger">Garinger</option>
+            <option value="grigg">Grigg</option>
+            <option value="belk">Belk Gym</option>
+            <option value="band">Band Center</option>
+            <option value="kennedy">Kennedy</option>
+            <option value="macy">Macy</option>
+            <option value="mceniry">McEniry</option>
+            <option value="memorial">Memorial Hall</option>
+            <option value="robinson">Robinson Hall</option>
+            <option value="rowe">Rowe</option>
+            <option value="smith">Smith</option>
+            <option value="storrs">Storrs</option>
+            <option value="win">Winningham</option>
+        </select>
+    </fieldset>
+     <!--Information needed for class 5-->
+    <fieldset class="class5">
+        <label for="class5">Class 5</label>
+        <input type="text" id="class5" name="class"><br><br>
+        <label for="monday5">Monday</label>
+        <input type="radio" id="monday5" name="monday"><br><br>
+        <label for="tuesday5">Tuesday</label>
+        <input type="radio" id="tuesday5" name="tuesday"><br><br>
+        <label for="wed5">Wednesday</label>
+        <input type="radio" id="wed5" name="wed"><br><br>
+        <label for="thursday5">Thursday</label>
+        <input type="radio" id="thursday5" name="thursday"><br><br>
+        <label for="friday5">Friday</label>
+        <input type="radio" id="friday5" name="friday"><br><br>
+        <label for="saturday5">Saturday</label>
+        <input type="radio" id="saturday5" name="saturday"><br><br>
+        <label for="classtime5">Time of Class:</label>
+        <input type="time" id="classtime5" name="classtime">
+        <label for="location5">Location</label>
+        <select name="location" id="location5">
+            <option value="woodward">Woodward</option>
+            <option value="chhs">CHHS</option>
+            <option value="coed">COED</option>
+            <option value="atkins">Atkins Library</option>
+            <option value="bioinformatic">Bioinformatic</option>
+            <option value="barnard">Barnard</option>
+            <option value="burson">Burson</option>
+            <option value="cameron">Cameron</option>
+            <option value="colvard">Colvard</option>
+            <option value="cone">Cone</option>
+            <option value="denny">Denny</option>
+            <option value="duke">Duke Centennial</option>
+            <option value="epic">EPIC</option>
+            <option value="fret">Fretwell</option>
+            <option value="friday">Friday</option>
+            <option value="garinger">Garinger</option>
+            <option value="grigg">Grigg</option>
+            <option value="belk">Belk Gym</option>
+            <option value="band">Band Center</option>
+            <option value="kennedy">Kennedy</option>
+            <option value="macy">Macy</option>
+            <option value="mceniry">McEniry</option>
+            <option value="memorial">Memorial Hall</option>
+            <option value="robinson">Robinson Hall</option>
+            <option value="rowe">Rowe</option>
+            <option value="smith">Smith</option>
+            <option value="storrs">Storrs</option>
+            <option value="win">Winningham</option>
+        </select>
+    </fieldset>
+    <!--Information needed for class 6-->
+    <fieldset class="class6">
+        <label for="class6">Class 6</label>
+        <input type="text" id="class6" name="class"><br><br>
+        <label for="monday6">Monday</label>
+        <input type="radio" id="monday6" name="monday"><br><br>
+        <label for="tuesday6">Tuesday</label>
+        <input type="radio" id="tuesday6" name="tuesday"><br><br>
+        <label for="wed6">Wednesday</label>
+        <input type="radio" id="wed6" name="wed"><br><br>
+        <label for="thursday6">Thursday</label>
+        <input type="radio" id="thursday6" name="thursday"><br><br>
+        <label for="friday6">Friday</label>
+        <input type="radio" id="friday6" name="friday"><br><br>
+        <label for="saturday6">Saturday</label>
+        <input type="radio" id="saturday6" name="saturday"><br><br>
+        <label for="classtime6">Time of Class:</label>
+        <input type="time" id="classtime6" name="classtime">
+        <label for="location6">Location</label>
+        <select name="location" id="location6">
+            <option value="woodward">Woodward</option>
+            <option value="chhs">CHHS</option>
+            <option value="coed">COED</option>
+            <option value="atkins">Atkins Library</option>
+            <option value="bioinformatic">Bioinformatic</option>
+            <option value="barnard">Barnard</option>
+            <option value="burson">Burson</option>
+            <option value="cameron">Cameron</option>
+            <option value="colvard">Colvard</option>
+            <option value="cone">Cone</option>
+            <option value="denny">Denny</option>
+            <option value="duke">Duke Centennial</option>
+            <option value="epic">EPIC</option>
+            <option value="fret">Fretwell</option>
+            <option value="friday">Friday</option>
+            <option value="garinger">Garinger</option>
+            <option value="grigg">Grigg</option>
+            <option value="belk">Belk Gym</option>
+            <option value="band">Band Center</option>
+            <option value="kennedy">Kennedy</option>
+            <option value="macy">Macy</option>
+            <option value="mceniry">McEniry</option>
+            <option value="memorial">Memorial Hall</option>
+            <option value="robinson">Robinson Hall</option>
+            <option value="rowe">Rowe</option>
+            <option value="smith">Smith</option>
+            <option value="storrs">Storrs</option>
+            <option value="win">Winningham</option>
+        </select>
+    </fieldset>
+</form>
+
+<h2>Personal Information</h2>
+<form class="personal"> <!--Come back to this section to add the action method so that the form can be sent to the recommendations page and sign the user in-->
+    <label for="fname">First Name:</label>
+    <input type="text" id="fname" name="fname"><br><br>
+    <label for="lname">Last Name:</label>
+    <input type="text" id="lname" name="lname"><br><br>
+    <label for="add">Address:</label>
+    <input type="text" id="add" name="add"><br><br>
+    <label for="phone">Phone Number:</label>
+    <input type="text" id="phone" name="phone"><br><br>
+    <label for="email">Email:</label>
+    <input type="email" id="email" name="email"><br><br>
+    <label for="pass">Password:</label>
+    <input type="password" id="pass" name="pass"><br><br>
+    <input type="submit" value="Sign Up!">
+</form>
+</main>
+
+</body>
+</html>

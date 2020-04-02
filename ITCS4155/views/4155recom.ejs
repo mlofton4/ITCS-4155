@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>Recommendations</title>
+    <meta name="description" content="ParkEasy"/>
+	<meta charset="UTF-8">
+	<link rel="stylesheet" type="text/css" href="../assets/stylesheets/Style2.css" />
+
+
+</head>
+<body>
+<!-- Creates the user navigation bar -->
+<div class="usernavbar">
+    <a href="/login">Login</a>
+    <a href="/signup">Sign Up</a>
+    <a href="/">Home</a>
+  </div>
+<main>
+<header>Recommendations</header><br>
+<h2 class="thebuild">The building you are trying to go to is: <%= global.building.toUpperCase() %></h2>
+<h2 class="theclass">Your classification is: <%= global.class %></h2>
+<h2 class="recomLeft"><u>Recommendations:</u></h2>
+<!-- Recommendations data  -->
+<div class="listrecom">
+    <% if (typeof data != 'undefined') { %>
+        <% for(let i=0; i < 1; i++){ %>
+            <a href="/maps?ID=<%= data[i]._connectionID %>" class="Rbutton" role="button"><%= data[i]._name %> -Most Recommendated </a>
+            <br>
+        <%}%>
+    <%}%>
+    </div>
+<div class="listrecom">
+<% if (typeof data != 'undefined') { %>
+    <% for(let i=1; i < data.length; i++){ %>
+        <a href="/maps?ID=<%= data[i]._connectionID %>" class="Rbutton" role="button"><%= data[i]._name %></a>
+        <br>
+    <%}%>
+<%}%>
+</div>
+<p class="bottomtext">Click an option to see our maps pages that will give you walking time, availability, and more.</p>
+</main>
+
+</body>
+</html>

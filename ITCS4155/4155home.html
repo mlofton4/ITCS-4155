@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>ParkEasy</title>
+    <meta name="description" content="Home"/>
+	<meta charset="UTF-8">
+	<link rel="stylesheet" type="text/css" href="index.css" />
+
+
+</head>
+<body>
+<!-- Creates the user navigation bar -->
+<div class="usernavbar">
+  <a href="">Login</a>
+  <a href="">Sign Up</a>
+  <a href="/">Home</a>
+</div>
+<main>
+<header>ParkEasy</header><br>
+
+<h2>Where do you wish to go?</h2>
+<form class="recomLocation" action="recommendations" method="POST">
+    <label for="location">Location</label>
+        <select name="location" id="location">
+            <option value="woodward" selected>Woodward</option>
+            <option value="chhs">CHHS</option>
+            <option value="coed">COED</option>
+            <option value="atkins">Atkins Library</option>
+            <option value="bioinformatic">Bioinformatic</option>
+            <option value="barnard">Barnard</option>
+            <option value="burson">Burson</option>
+            <option value="cameron">Cameron</option>
+            <option value="colvard">Colvard</option>
+            <option value="cone">Cone</option>
+            <option value="denny">Denny</option>
+            <option value="duke">Duke Centennial</option>
+            <option value="epic">EPIC</option>
+            <option value="fret">Fretwell</option>
+            <option value="friday">Friday</option>
+            <option value="garinger">Garinger</option>
+            <option value="grigg">Grigg</option>
+            <option value="belk">Belk Gym</option>
+            <option value="band">Band Center</option>
+            <option value="kennedy">Kennedy</option>
+            <option value="macy">Macy</option>
+            <option value="mceniry">McEniry</option>
+            <option value="memorial">Memorial Hall</option>
+            <option value="robinson">Robinson Hall</option>
+            <option value="rowe">Rowe</option>
+            <option value="smith">Smith</option>
+            <option value="storrs">Storrs</option>
+            <option value="win">Winningham</option>
+        </select>
+        <caption>Classification</caption>
+        <label for="rstudent">Residential Student</label>
+        <input type="radio" id="rstudent" name="classify"><br><br>
+        <label for="nstudent">Non-Residential Student</label>
+        <input type="radio" id="nstudent" name="classify"><br><br>
+        <label for="faculty">Faculty/Staff</label>
+        <input type="radio" id="faculty" name="classify"><br><br>
+        <label for="visitor">Visitor</label>
+        <input type="radio" id="visitor" name="classify"><br><br>
+</form>
+
+
+<table>
+    <caption class="caption">Parking Availability</caption>
+    <tr>
+        <th>Parking Options</th>
+        <th>Availability</th>
+    </tr>
+    <%if (typeof my != 'undefined'){ %>
+		<% for(let i=0; i< my.length; i++){ %>
+			<tr>
+				<td><%= my[i]._name %></td>
+                <td><%= my[i]._space %></td>
+            </tr>
+        <%}%>
+	<%}%>    
+</table>
+<button class="submitbutton">Find the closest parking spot NOW!</button>
+<img src="" alt="" class="homeleft">
+<img src="" alt="" class="homeright">
+<p class="datetimeleft"><span id="datetime"></span></p>
+
+
+
+
+</main>
+<!-- Makes the footer -->
+<footer class="foot">
+		<p>© LangUp </p>
+		<a href="https://validator.w3.org/check?uri=referer">Validate</a> 
+		<a href="https://jigsaw.w3.org/css-validator/check/referer">Validate CSS</a>
+		<a href="">Contact Us</a>
+</footer>
+</body>
+</html>
