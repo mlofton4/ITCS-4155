@@ -308,12 +308,10 @@
     </fieldset>
 </form>
 
-<h2 class="personal">Personal Information (required)</h2>
-<div class="container">
-    <div class="signup">Welcome to ParkEasy</div>
+<form action="/" method="POST">
+    <div class="signup">Welcome to ParkEasy (required)</div>
     <div class="signup-form">
         <input type="text" placeholder="Type your First Name Here" class="input"><br>
-        <input type="text" placeholder="Type your Last Name Here" class="input"><br>
         <input type="text" placeholder="Type your Email Here" class="input"><br>
         <input type="text" placeholder="Type your Username Here" class="input"><br>
         <input type="password" placeholder="Type your Password Here" class="input"><br>
@@ -321,10 +319,11 @@
         <input type="checkbox" checked="checked" name="remember" style="margin-bottom:15px"> Remember me
         </label><br>
         <p>By creating an account you agree to our <a href="#" style="color:dodgerblue">Terms & Privacy</a>.</p><br>
-        <div class="btn">Create Account</div><br>
-    </div>
+        <button type= "submit" class="btn">Create Account</button><br>
+            <span><a href="#">I Forgot my Username or Password</a> </span>
+        </div>
+</form>
 
-    </div>
 </main>
 
 </body>

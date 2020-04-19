@@ -12,11 +12,20 @@
 <body>
 <!-- Creates the user navigation bar -->
 <div class="usernavbar">
-    <a href="/login">Login</a>
-    <a href="/signup">Sign Up</a>
-    <a href="/">Home</a>
+    <% if (global.signedin == false) { %>
+        <a href="/login">Login</a>
+      <a href="/signup">Sign Up</a>
+      <a href="/">Home</a>
+      <%}else{ %>
+        <a href="/login/logout">Log Out</a>
+        <a href="/">Home</a>
+      <%} %>
   </div>
 <main>
+     <!-- Creates the if the user is signed in, and if so, it will display the users name -->
+  <% if (global.signedin == true) { %>
+    <p>Welcome <%= global.name %> !</p>
+    <%} %>
 <header>Recommendations</header><br>
 <h2 class="thebuild">The building you are trying to go to is: <%= global.building.toUpperCase() %></h2>
 <h2 class="theclass">Your classification is: <%= global.class %></h2>
@@ -25,7 +34,7 @@
 <div class="listrecom">
     <% if (typeof data != 'undefined') { %>
         <% for(let i=0; i < 1; i++){ %>
-            <a href="/maps?ID=<%= data[i]._connectionID %>" class="Rbutton" role="button"><%= data[i]._name %> -Most Recommendated </a>
+            <a href="/maps %>" class="Rbutton" role="button"><%= data[i]._name %> -Most Recommendated </a>
             <br>
         <%}%>
     <%}%>

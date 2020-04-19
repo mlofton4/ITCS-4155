@@ -7,10 +7,9 @@ var router = express.Router();
 let Parking = require('../util/parkingOptions');
 ParkingDecks = new Parking(); //access needed to get the functions
 
-
-
 //router for the connection
 router.get('/', function(req, res){
+     
   res.render('4155home', {my: ParkingDecks.getParkingOptions()});
 
 });
