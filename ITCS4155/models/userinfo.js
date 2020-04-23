@@ -1,12 +1,10 @@
 class UserInfo {
-    constructor(ID, classification, firstname, lastname, address, phone, email, password){ //constructor needed to hold the data for the user
+    constructor(ID, classification, firstname, email , username, password){ //constructor needed to hold the data for the user
     this._ID = ID;
     this.classification = classification;
     this._firstname = firstname;
-    this._lastname = lastname;
-    this._address = address;
-    this._phone = phone;
     this._email = email;
+    this._username = username;
     this._password = password;
     }//creates the class that will be used to create the user's info
 
@@ -21,17 +19,12 @@ class UserInfo {
     getfirstname(){
         return this._firstname; //gets the first name of user
     }
-    getlastname(){
-        return this._lastname; //gets the last name of user
-    }
-    getaddress(){
-        return this._address; //gets the address of user
-    }
-    getphone(){
-        return this._phone; //gets the state from the user
-    }
+
     getemail(){
         return this._email; //gets the email of user
+    }
+    getusername(){
+        return this._username; //gets the state from the user
     }
     getpassword(){
         return this._password; //gets the country of the user
@@ -50,21 +43,14 @@ class UserInfo {
     setfirstname(thefirstname){
         this._firstname = thefirstname; //sets the first name of the user
     }
-    
-    setlastname(thelastname){
-        this._lastname = thelastname; //sets the last name of the user
-    }
-
-    setaddress(add){
-        this._address = add; //sets the first address of the user
-    }
-
-    setphone(thenum){
-        this._phone = thenum;
-    }
+ 
 
     setemail(theemail){
         this._email = theemail; //sets the email of the user
+    }
+
+    setusername(theuse){
+        this._username = theuse;
     }
     
     setpassword(pass){

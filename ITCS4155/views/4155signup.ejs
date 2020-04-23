@@ -17,33 +17,29 @@
   <a href="/">Home</a>
 </div>
 <main>
- <!--Information needed to get the user's classification-->
-<h2 class="headclass">Choose your classification: (required)</h2>
-<form class="classification">
-    <select name="classify" id="classify">
-        <option value="residential" selected>Residential</option>
-        <option value="faculty">Faculty</option>
-        <option value="commuter">Commuter</option>
-        <option value="visitor">Visitor</option>
-    </select>
-</form><br>
 
-<h2 class="headS">Schedule (Optional ~ Can be used to quickly route you based on your classes)</h2>
-<form class="schedule">
-     <!--Information needed for class 1-->
+<form action="/" method="POST">
+    <div class="signup">Welcome to ParkEasy (required)</div>
+    <div class="signup-form">
+        <input type="text" placeholder="Type your First Name Here" class="input"><br>
+        <input type="text" placeholder="Type your Email Here" class="input"><br>
+        <input type="text" placeholder="Type your Username Here" class="input"><br>
+        <input type="password" placeholder="Type your Password Here" class="input"><br>
+         <!--Information needed to get the user's classification-->
+        <label class="labelclass" for="classify">Choose your classification</label>
+        <select name="classify" id="classify">
+            <option value="residential" selected>Residential</option>
+            <option value="faculty">Faculty</option>
+            <option value="commuter">Commuter</option>
+            <option value="visitor">Visitor</option>
+        </select><br><br><br>
+        <label class="scLabel">Schedule (Optional ~ Can be used to quickly route you based on your classes)</label><br>
+         <!--Information needed for class 1-->
     <fieldset class="class1">
-        <select name="class1" id="class1">
-            <option value="Monday" selected>Monday</option>
-            <option value="Tuesday">Tuesday</option>
-            <option value="Wednesday">Wednesday</option>
-            <option value="Thursday">Thursday</option>
-            <option value="Friday">Friday</option>
-            <option value="Saturday">Saturday</option>
-        </select><br>
-        <label for="classtime">Time of Class:</label>
-        <input type="time" id="classtime" name="classtime">
-        <label for="location2">Location</label>
-        <select name="location" id="location2">
+        <label for="classtime1">Start Time of Class:</label>
+        <input type="time" id="classtime1" name="classtime1">
+        <label for="location1">Location</label>
+        <select name="location1" id="location1">
             <option value="woodward">Woodward</option>
             <option value="chhs">CHHS</option>
             <option value="coed">COED</option>
@@ -73,23 +69,24 @@
             <option value="storrs">Storrs</option>
             <option value="win">Winningham</option>
         </select>
-        <label for="classname">Name of Class:</label>
-        <input type="text" id="classname" name="classname">
+        <label for="classname1">Name of Class:</label>
+        <input type="text" id="classname1" name="classname1">
+        <label for="classday1">Day of Class:</label>
+        <select name="classday1" id="classday1">
+            <option value="Monday" selected>Monday</option>
+            <option value="Tuesday">Tuesday</option>
+            <option value="Wednesday">Wednesday</option>
+            <option value="Thursday">Thursday</option>
+            <option value="Friday">Friday</option>
+            <option value="Saturday">Saturday</option>
+        </select>
     </fieldset>
      <!--Information needed for class 2-->
     <fieldset class="class2">
-        <select name="class2" id="class2">
-            <option value="Monday" selected>Monday</option>
-            <option value="Tuesday">Tuesday</option>
-            <option value="Wednesday">Wednesday</option>
-            <option value="Thursday">Thursday</option>
-            <option value="Friday">Friday</option>
-            <option value="Saturday">Saturday</option>
-        </select><br>
-        <label for="classtime2">Time of Class:</label>
-        <input type="time" id="classtime2" name="classtime">
+        <label for="classtime2">Start Time of Class:</label>
+        <input type="time" id="classtime2" name="classtime2">
         <label for="location2">Location</label>
-        <select name="location" id="location2">
+        <select name="location2" id="location2">
             <option value="woodward">Woodward</option>
             <option value="chhs">CHHS</option>
             <option value="coed">COED</option>
@@ -119,23 +116,24 @@
             <option value="storrs">Storrs</option>
             <option value="win">Winningham</option>
         </select>
-        <label for="classtime2">Name of Class:</label>
+        <label for="classname2">Name of Class:</label>
         <input type="text" id="classname2" name="classname2">
+        <label for="classday2">Day of Class:</label>
+        <select name="classday2" id="classday2">
+        <option value="Monday" selected>Monday</option>
+        <option value="Tuesday">Tuesday</option>
+        <option value="Wednesday">Wednesday</option>
+        <option value="Thursday">Thursday</option>
+        <option value="Friday">Friday</option>
+        <option value="Saturday">Saturday</option>
+    </select><br>
     </fieldset>
      <!--Information needed for class 3-->
     <fieldset class="class3">
-        <select name="class3" id="class3">
-            <option value="Monday" selected>Monday</option>
-            <option value="Tuesday">Tuesday</option>
-            <option value="Wednesday">Wednesday</option>
-            <option value="Thursday">Thursday</option>
-            <option value="Friday">Friday</option>
-            <option value="Saturday">Saturday</option>
-        </select><br>
-        <label for="classtime3">Time of Class:</label>
-        <input type="time" id="classtime3" name="classtime">
+        <label for="classtime3">Start Time of Class:</label>
+        <input type="time" id="classtime3" name="classtime3">
         <label for="location3">Location</label>
-        <select name="location" id="location3">
+        <select name="location3" id="location3">
             <option value="woodward">Woodward</option>
             <option value="chhs">CHHS</option>
             <option value="coed">COED</option>
@@ -167,21 +165,22 @@
         </select>
         <label for="classtime3">Name of Class:</label>
         <input type="text" id="classname3" name="classname3">
+        <label for="classday3">Day of Class:</label>
+        <select name="classday3" id="classday3">
+        <option value="Monday" selected>Monday</option>
+        <option value="Tuesday">Tuesday</option>
+        <option value="Wednesday">Wednesday</option>
+        <option value="Thursday">Thursday</option>
+        <option value="Friday">Friday</option>
+        <option value="Saturday">Saturday</option>
+    </select><br>
     </fieldset>
      <!--Information needed for class 4-->
     <fieldset class="class4">
-        <select name="class4" id="class4">
-            <option value="Monday" selected>Monday</option>
-            <option value="Tuesday">Tuesday</option>
-            <option value="Wednesday">Wednesday</option>
-            <option value="Thursday">Thursday</option>
-            <option value="Friday">Friday</option>
-            <option value="Saturday">Saturday</option>
-        </select><br>
-        <label for="classtime4">Time of Class:</label>
-        <input type="time" id="classtime4" name="classtime">
+        <label for="classtime4">Start Time of Class:</label>
+        <input type="time" id="classtime4" name="classtime4">
         <label for="location4">Location</label>
-        <select name="location" id="location4">
+        <select name="location4" id="location4">
             <option value="woodward">Woodward</option>
             <option value="chhs">CHHS</option>
             <option value="coed">COED</option>
@@ -213,21 +212,22 @@
         </select>
         <label for="classname4">Name of Class:</label>
         <input type="text" id="classname4" name="classname4">
+        <label for="classday4">Day of Class:</label>
+        <select name="classday4" id="classday4">
+        <option value="Monday" selected>Monday</option>
+        <option value="Tuesday">Tuesday</option>
+        <option value="Wednesday">Wednesday</option>
+        <option value="Thursday">Thursday</option>
+        <option value="Friday">Friday</option>
+        <option value="Saturday">Saturday</option>
+    </select><br>
     </fieldset>
      <!--Information needed for class 5-->
     <fieldset class="class5">
-        <select name="class5" id="class5">
-            <option value="Monday" selected>Monday</option>
-            <option value="Tuesday">Tuesday</option>
-            <option value="Wednesday">Wednesday</option>
-            <option value="Thursday">Thursday</option>
-            <option value="Friday">Friday</option>
-            <option value="Saturday">Saturday</option>
-        </select><br>
-        <label for="classtime5">Time of Class:</label>
-        <input type="time" id="classtime5" name="classtime">
+        <label for="classtime5">Start Time of Class:</label>
+        <input type="time" id="classtime5" name="classtime5">
         <label for="location5">Location</label>
-        <select name="location" id="location5">
+        <select name="location5" id="location5">
             <option value="woodward">Woodward</option>
             <option value="chhs">CHHS</option>
             <option value="coed">COED</option>
@@ -259,21 +259,22 @@
         </select>
         <label for="classname5">Name of Class:</label>
         <input type="text" id="classname5" name="classname5">
+        <label for="classday5">Day of Class:</label>
+        <select name="classday5" id="classday5">
+        <option value="Monday" selected>Monday</option>
+        <option value="Tuesday">Tuesday</option>
+        <option value="Wednesday">Wednesday</option>
+        <option value="Thursday">Thursday</option>
+        <option value="Friday">Friday</option>
+        <option value="Saturday">Saturday</option>
+    </select><br>
     </fieldset>
     <!--Information needed for class 6-->
     <fieldset class="class6">
-        <select name="class6" id="class6">
-            <option value="Monday" selected>Monday</option>
-            <option value="Tuesday">Tuesday</option>
-            <option value="Wednesday">Wednesday</option>
-            <option value="Thursday">Thursday</option>
-            <option value="Friday">Friday</option>
-            <option value="Saturday">Saturday</option>
-        </select><br>
-        <label for="classtime6">Time of Class:</label>
-        <input type="time" id="classtime6" name="classtime">
+        <label for="classtime6">Start Time of Class:</label>
+        <input type="time" id="classtime6" name="classtime6">
         <label for="location6">Location</label>
-        <select name="location" id="location6">
+        <select name="location6" id="location6">
             <option value="woodward">Woodward</option>
             <option value="chhs">CHHS</option>
             <option value="coed">COED</option>
@@ -305,17 +306,17 @@
         </select>
         <label for="classname6">Name of Class:</label>
         <input type="text" id="classname6" name="classname6">
+        <label for="classday6">Day of Class:</label>
+        <select name="classday6" id="classday6">
+        <option value="Monday" selected>Monday</option>
+        <option value="Tuesday">Tuesday</option>
+        <option value="Wednesday">Wednesday</option>
+        <option value="Thursday">Thursday</option>
+        <option value="Friday">Friday</option>
+        <option value="Saturday">Saturday</option>
+    </select><br>
     </fieldset>
-</form>
-
-<form action="/" method="POST">
-    <div class="signup">Welcome to ParkEasy (required)</div>
-    <div class="signup-form">
-        <input type="text" placeholder="Type your First Name Here" class="input"><br>
-        <input type="text" placeholder="Type your Email Here" class="input"><br>
-        <input type="text" placeholder="Type your Username Here" class="input"><br>
-        <input type="password" placeholder="Type your Password Here" class="input"><br>
-        <label>
+        <label><br>
         <input type="checkbox" checked="checked" name="remember" style="margin-bottom:15px"> Remember me
         </label><br>
         <p>By creating an account you agree to our <a href="#" style="color:dodgerblue">Terms & Privacy</a>.</p><br>
@@ -323,7 +324,6 @@
             <span><a href="#">I Forgot my Username or Password</a> </span>
         </div>
 </form>
-
 </main>
 
 </body>

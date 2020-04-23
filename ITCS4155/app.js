@@ -5,27 +5,14 @@ global.name = "";
 global.class = "";
 global.building = "";
 global.time = '';
-
-function showTime(){
-  var today = new Date();
-  var h = today.getHours();
-  var m = today.getMinutes();
-  var s = today.getSeconds();
-  m = checkTime(m);
-  s = checkTime(s);
-  global.time = (h + ":" + m + ":" + s);
-  setTimeout(showTime, 500);
-  }
-
-  function checkTime(i) {
-      if (i < 10) {i = "0" + i};  // add zero in front of numbers < 10
-      return i;
-    }
-    showTime();
+var getDay = new Date();
+var h = getDay.getHours()
+console.log(h);
 
 
  //variable that will hold the name of the user once they sign in
 var app = express();
+
 
 app.set('view engine', 'ejs');
 app.use('/assets', express.static('assets'));

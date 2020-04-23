@@ -145,27 +145,27 @@ td {
   font-size: 30px;
 }
 
- /* Always set the map height explicitly to define the size of the div
-       * element that contains the map. */
-       #map {
-        height: 100%;
-      }
-      /* Optional: Makes the sample page fill the window. */
-      .mapsbody {
-        height: 100%;
-        margin: 0;
-        padding: 0;
-      }
-      #floating-panel {
-        position: absolute;
-        top: 10px;
-        left: 25%;
-        z-index: 5;
-        background-color: #fff;
-        padding: 5px;
-        border: 1px solid #999;
-        text-align: center;
-        font-family: 'Roboto','sans-serif';
-        line-height: 30px;
-        padding-left: 10px;
-      }
+.thetime{
+  font-size: 80px;
+  position: absolute;
+  left: 20px;
+  top: 700px;
+ 
+}
+
+.updateA{
+  background-color: #87CEFA;
+  color: black;
+  padding: 20px 40px;
+  text-align: center;
+  display: inline-block;
+  position: absolute;
+  left: 1150px;
+  top: 830px;
+}
+.updateText{
+  position: absolute;
+  left: 1300px;
+  top: 810px;
+  font-size: 30px;
+}
