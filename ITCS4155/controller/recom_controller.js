@@ -26,14 +26,25 @@ router.post('/', function(req, res){
 }); */
 
 //router for the connection
-router.get('/', function(req, res){
+router.get('/', async function(req, res){
     console.log(global.building);
     console.log(global.class);
-    
-    ParkingDecks.reset();
-    ParkingDecks.CheckDistance(global.building);
-    ParkingDecks.SortOptions()
-    res.render('4155recom', {data: ParkingDecks.CheckClass(global.class)});
+    let resident = await ParkingDecks.FindBestParkingR(global.building)
+    let faculty = await ParkingDecks.FindBestParkingF(global.building)
+    let commuter = await ParkingDecks.FindBestParkingC(global.building)
+    let visitor = await ParkingDecks.FindBestParkingV(global.building)
+    if(global.class == "residential"){
+      res.render('4155recom', {data: resident});
+    }
+    else if(global.class == "faculty"){
+      res.render('4155recom', {data: faculty});
+    }
+    else if(global.class == "commuter"){
+      res.render('4155recom', {data: commuter});
+    }
+    else{
+      res.render('4155recom', {data: visitor});
+    }
   
 
 });

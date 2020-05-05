@@ -1,6 +1,7 @@
 var express = require('express');
 var bodyParser = require('body-parser');
 global.signedin = false; //variable to see if the user is signed in or not
+global.userID = ""
 global.name = "";
 global.class = "";
 global.building = "";
@@ -9,7 +10,7 @@ var getDay = new Date();
 var h = getDay.getHours()
 console.log(h);
 
-
+let d = require('./models/hours');
  //variable that will hold the name of the user once they sign in
 var app = express();
 
