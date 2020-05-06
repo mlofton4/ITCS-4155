@@ -5,10 +5,8 @@ global.userID = ""
 global.name = "";
 global.class = "";
 global.building = "";
-global.time = '';
-var getDay = new Date();
-var h = getDay.getHours()
-console.log(h);
+
+
 
 let d = require('./models/hours');
  //variable that will hold the name of the user once they sign in

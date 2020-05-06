@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>Profile</title>
+    <meta name="description" content="ParkEasy"/>
+	<meta charset="UTF-8">
+	<link rel="stylesheet" type="text/css" href="../assets/stylesheets/Style2.css" />
+
+
+</head>
+<body>
+<!-- Creates the user navigation bar -->
+<div class="usernavbar">
+        <a href="/login/logout">Log Out</a>
+        <a href="/profile">My Profile</a>
+        <a href="/">Home</a>
+  </div>
+<main>
+<h2><%= global.name %>'s Profile</h2>
+<table>
+	<!-- Creates a table that will hold the sessions selected by the user-->
+	<tr>
+		<th>Building</th>
+		<th>Date</th>
+		<th>Time</th>
+		<th>Get Recommendations</th>
+		<th>Delete</th>
+	</tr>
+	<%if (typeof pro != 'undefined'){ %>
+		<% for(let i=0; i< pro.length; i++){ %>
+			<tr>
+				<td><%= pro[i]._name %></td>
+				<td><%= pro[i]._date %></td>
+				<td><%= pro[i]._time %></td>
+				<td><a href="/recommendations?building=pro[i]._name%>" class="recbutton" id="recbut" role="button">Get Recommendations</a></td>
+				<td><a href="/profile/delete?ID=<%= pro[i]._ID %>" class="deletebutton" id="delete" role="button">Delete</a></td>
+			</tr>
+		<%}%>
+	<%}%>
+</table>
+</main>
+</body>
+</html>

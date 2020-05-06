@@ -11,7 +11,6 @@
 </head>
 <body class="homebody">
 <!-- Creates the user navigation bar -->
-<!-- Creates the user navigation bar -->
 <div class="usernavbar">
     <% if (global.signedin == false) { %>
         <a href="/login">Login</a>
@@ -19,6 +18,7 @@
       <a href="/">Home</a>
       <%}else{ %>
         <a href="/login/logout">Log Out</a>
+        <a href="/profile">My Profile</a>
         <a href="/">Home</a>
       <%} %>
   </div>

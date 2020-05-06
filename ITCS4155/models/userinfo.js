@@ -1,7 +1,7 @@
 class UserInfo {
     constructor(ID, classification, firstname, email , username, password){ //constructor needed to hold the data for the user
     this._ID = ID;
-    this.classification = classification;
+    this._classification = classification;
     this._firstname = firstname;
     this._email = email;
     this._username = username;

@@ -3,11 +3,11 @@ var db = require('../util/database');
 var Schema = db.Schema;
 
 var PreviousSchema = new Schema({
+        _id: Number,
         userid: Number,
-        day: String,
+        date: String,
         time: String,
-        location: String,
-        deck: String
+        building: String
     });
 
 

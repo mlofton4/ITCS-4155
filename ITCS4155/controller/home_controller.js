@@ -1,6 +1,5 @@
 var express = require('express');
 var router = express.Router();
-var moment = require('moment');
 
 //let UserInfo = require('../models/user'); //requires the model users
 global.loginMessage = [];
@@ -67,7 +66,6 @@ router.post('/', [
   }
 });
 
-global.time = moment().format('MMMM Do YYYY');
 
 //router for the connection
 router.get('/', async function(req, res){

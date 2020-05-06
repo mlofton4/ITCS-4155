@@ -4,22 +4,6 @@ let ParkingHours = require('../models/hours')
 let Hours = require('../models/hoursinfo')
 
 
-//This is the code to that will hardcode the database
-const ParkingOptions = [
-    new ParkingOption("Cone Deck 1", 15, 0, "yes", "no", "no", "no"),
-    new ParkingOption("Cone Deck 2", 5, 0, "no", "no", "no", "yes"),
-    new ParkingOption("CRI Deck", 4, 0, "yes", "no", "yes", "yes"),
-    new ParkingOption("East Deck 1", 0, 0, "yes", "no", "no", "yes"),
-    new ParkingOption("East Deck 2", 0, 0, "no", "no", "yes", "no"),
-    new ParkingOption("East Deck 3", 0, 0, "no", "no", "yes", "no"),
-    new ParkingOption("North Deck", 3, 0, "no", "yes", "yes", "no"),
-    new ParkingOption("South Village Deck", 7, 0, "no", "yes","yes","yes"),
-    new ParkingOption("Union Deck Lower", 5, 0, "no", "no","yes","no"),
-    new ParkingOption("Union Deck Upper", 96, 0, "yes", "no", "yes", "yes"),
-    new ParkingOption("West Deck", 75, 0, "no", "no", "yes", "no")
-
-];
-
 
 //console.log(connections);
 class Parking {
@@ -162,7 +146,9 @@ class Parking {
 
     DecksHourly(){
         return new Promise((resolve, reject) => {
-            ParkingHours.find({hour: 1})
+            let thisDay = new Date();
+            let hour = thisDay.getHours()
+            ParkingHours.find({hour: hour})
             .then((data) => {
                 
                 console.log("we are listing all decks within the hour");
