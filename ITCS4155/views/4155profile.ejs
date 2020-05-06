@@ -30,10 +30,10 @@
 	<%if (typeof pro != 'undefined'){ %>
 		<% for(let i=0; i< pro.length; i++){ %>
 			<tr>
-				<td><%= pro[i]._name %></td>
+				<td><%= pro[i]._building %></td>
 				<td><%= pro[i]._date %></td>
 				<td><%= pro[i]._time %></td>
-				<td><a href="/recommendations?building=pro[i]._name%>" class="recbutton" id="recbut" role="button">Get Recommendations</a></td>
+				<td><a href="/recommendations?building=pro[i]._building%>" class="recbutton" id="recbut" role="button">Get Recommendations</a></td>
 				<td><a href="/profile/delete?ID=<%= pro[i]._ID %>" class="deletebutton" id="delete" role="button">Delete</a></td>
 			</tr>
 		<%}%>

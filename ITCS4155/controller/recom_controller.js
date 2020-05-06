@@ -7,26 +7,27 @@ var router = express.Router();
 let Parking = require('../util/parkingOptions');
 ParkingDecks = new Parking(); //access needed to get the functions
 
-
+let PreviousDest = require('../util/userProfile');
 
 //router that will be used for 
-router.post('/', function(req, res){
+router.post('/', async function(req, res){
   global.building = req.body.location;
   
   global.class = req.body.classify;
+
+  if(global.signedin){
+  let a = await PreviousDest.StorePrevious(global.userID, global.building)
+  }
   res.redirect('/recommendations');
 });
-/*  //save the user
- 
- 
-  req.session.User = user; //stores the user in the session
-  console.log(req.session);
-  global.name = req.session.User._firstname; //the global variable name will now hold the first name of the user
-  res.redirect('/savedConnections') //renders savedConnections
-}); */
 
-//router for the connection
+
+//router for the recommendations page
 router.get('/', async function(req, res){
+  if(req.query.building != null){
+    global.building = req.query.building;
+  }
+
     console.log(global.building);
     console.log(global.class);
     let resident = await ParkingDecks.FindBestParkingR(global.building)

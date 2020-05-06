@@ -24,6 +24,7 @@ var recommendations = require('./controller/recom_controller'); //router for the
 var index = require('./controller/home_controller');
 var signup = require('./controller/signup_controller');
 var login = require('./controller/login_controller');
+var profile = require('./controller/profile_controller');
 
 
 
@@ -32,6 +33,7 @@ app.use('/recommendations', recommendations);
 app.use('/', index);
 app.use('/signup', signup);
 app.use('/login', login);
+app.use('/profile', profile);
 
 
 app.get('/maps', function(req, res){
