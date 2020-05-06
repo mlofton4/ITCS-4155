@@ -71,9 +71,16 @@ router.get('/', async function(req, res){
     if(global.signedin){
 let destinations = await PreviousDest.GetPrevious(global.userID)
 
-res.render('4155profile', {pro: destinations});
-    }
+var going = prompt("Are you going to class? Please type no or hit cancel, if you are not.", "Yes");
+if(going == null || going == ""){
+    res.render('4155profile', {pro: destinations});
+} 
 
+else{
+
+    
+}
+    }
     else{
         res.redirect('/login');
     }

@@ -7,7 +7,8 @@ var ClassSchema = new Schema({
         name: String,
         day: String,
         time: String,
-        location: String
+        building: String,
+        hour: String
    
     });
 
