@@ -99,27 +99,33 @@ class UserProfile{
         });
     }
 
-    GetNextClass(){
+    GetClasses(ID){
         return new Promise((resolve, result) => {
-            let thisHourDate = new Date()
-            let thisHour = thisHourDate.getHours()
-            ClassSchema.find({hour: thisHour})//finds the connection based on the ID
+            ClassSchema.find({userid : ID})//finds the connection based on the ID
             .then((data) => {
+
+
+            let classArray = []; //array that will hold the connections
+            data.forEach((value) => { //loops through the data and grabs all the connections
             
-                console.log("we are finding the user's next class");
+                console.log("we are getting all the user's classes");
 
                     let thisclass  = new Classinfo();
                     //using the set properties for each connection 
-                    thisclass.setID(data.userid);
-                    thisclass.setname(data.name);
-                    thisclass.setday(data.day);
-                    thisclass.settime(data.time);
-                    thisclass.setbuilding(data.building);
-                    thisclass.sethour(data.hour);
+                    thisclass.setID(value.userid);
+                    thisclass.setname(value.name);
+                    thisclass.setday(value.day);
+                    thisclass.settime(value.time);
+                    thisclass.setbuilding(value.building);
+                    thisclass.sethour(value.hour);
     
-                //resolve with the array 
-                resolve(nextClass);            
-            })
+                      //pushes all information into the array
+                      classArray.push(thisclass);
+                    });
+        
+                    //resolve with the array 
+                    resolve(classArray);            
+                })
 
       //catches any errors if they happen
         .catch((err) => {
