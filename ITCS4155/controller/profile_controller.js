@@ -1,10 +1,15 @@
+var express = require('express');
+var router = express.Router();
+
 global.loginMessage = [];
 
 const {check,validationResult} = require('express-validator');
 
-let UserSch = require('../models/userSchema')
+let UserSch = require('../models/userSchema');
 
-let PreviousDest = require('../util/userProfile')
+let PreviousDest = require('../util/userProfile');
+
+PreviousDest = new PreviousDest();
 
 router.post('/', [
     check('username').notEmpty() //username field cannot be empty
@@ -63,9 +68,15 @@ router.post('/', [
 
 //router for the profile page
 router.get('/', async function(req, res){
+    if(global.signedin){
 let destinations = await PreviousDest.GetPrevious(global.userID)
 
 res.render('4155profile', {pro: destinations});
+    }
+
+    else{
+        res.redirect('/login');
+    }
 
 });
 
@@ -75,3 +86,7 @@ router.get('/delete', async function(req,res){
 
     res.redirect('/profile'); //redirects the user back to savedConnections
   });
+
+
+  //exports the router
+module.exports = router;

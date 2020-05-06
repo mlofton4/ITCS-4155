@@ -8,6 +8,7 @@ let Parking = require('../util/parkingOptions');
 ParkingDecks = new Parking(); //access needed to get the functions
 
 let PreviousDest = require('../util/userProfile');
+Previous = new PreviousDest();
 
 //router that will be used for 
 router.post('/', async function(req, res){
@@ -15,9 +16,6 @@ router.post('/', async function(req, res){
   
   global.class = req.body.classify;
 
-  if(global.signedin){
-  let a = await PreviousDest.StorePrevious(global.userID, global.building)
-  }
   res.redirect('/recommendations');
 });
 
@@ -27,6 +25,11 @@ router.get('/', async function(req, res){
   if(req.query.building != null){
     global.building = req.query.building;
   }
+
+  
+  if(global.signedin == true){
+    let a = await Previous.StorePrevious(global.userID, global.building)
+    }
 
     console.log(global.building);
     console.log(global.class);

@@ -7,13 +7,20 @@ class UserProfile{
 
         return new Promise((resolve, result)=> {
             let thisDay = new Date()
-            let date = thisDay.getDate();
-            let time = thisDay.getTime();
+            let month = thisDay.getMonth();
+            let day = thisDay.getVarDate();
+            let year = thisDay.getFullYear();
+            let date = (month + "/" + day + "/" + year);
+
+            let hour = thisDay.getHours();
+            let mins = thisDay.getMinutes();
+            let time = (hour + ":" + mins);
 
             PreviousSchema.find({userid: userID, destid : id})
             .then((data) => {
-
-                if(data == null){
+                console.log("look under this")
+                console.log(data);
+                if(data.length == 0){
                     console.log("we are storing this destination");
                     //creates the new connection and stores in the database 
                     var previousDestination = new PreviousSchema({destid: id, userid: userID, date: date, time: time, building: building});
@@ -21,6 +28,7 @@ class UserProfile{
                     //saves the new connection
                     previousDestination.save(function(err){
                         if(err)return console.error(err);
+                        console.log('we came here ')
                     });
                 }
 
