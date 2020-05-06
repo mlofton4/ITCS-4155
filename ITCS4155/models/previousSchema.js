@@ -3,7 +3,7 @@ var db = require('../util/database');
 var Schema = db.Schema;
 
 var PreviousSchema = new Schema({
-        _id: Number,
+        destid: Number,
         userid: Number,
         date: String,
         time: String,

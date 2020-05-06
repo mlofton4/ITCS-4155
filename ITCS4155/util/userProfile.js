@@ -10,13 +10,13 @@ class UserProfile{
             let date = thisDay.getDate();
             let time = thisDay.getTime();
 
-            PreviousSchema.findById(id)
+            PreviousSchema.find({userid: userID, destid : id})
             .then((data) => {
 
                 if(data == null){
                     console.log("we are storing this destination");
                     //creates the new connection and stores in the database 
-                    var previousDestination = new PreviousSchema({_id: id, userid: userID, date: date, time: time, building: building});
+                    var previousDestination = new PreviousSchema({destid: id, userid: userID, date: date, time: time, building: building});
                     id++;
                     //saves the new connection
                     previousDestination.save(function(err){
@@ -48,7 +48,7 @@ class UserProfile{
             data.forEach((dest) => { //loops through the data and grabs all the connections
                 let thisDest  = new Previous();
                 //using the set properties for each connection 
-                thisDest.setID(dest._id)
+                thisDest.setID(dest.destid)
                 thisDest.setuserID(dest.userid);
                 thisDest.setdate(dest.date);
                 thisDest.settime(dest.time);
@@ -71,9 +71,9 @@ class UserProfile{
        
     }
 
-    DeletePrevious(ID){
+    DeletePrevious(ID, userID){
         return new Promise((resolve, result) => {
-            PreviousSchema.findById(ID)//finds the connection based on the ID
+            PreviousSchema.find({destid: ID, userid:userID})//finds the connection based on the ID
             .deleteOne()//deletes the connection 
             .exec()
             .then(function() {
