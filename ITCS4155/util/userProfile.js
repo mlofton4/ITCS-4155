@@ -71,6 +71,24 @@ class UserProfile{
        
     }
 
+    DeletePrevious(ID){
+        return new Promise((resolve, result) => {
+            PreviousSchema.findById(ID)//finds the connection based on the ID
+            .deleteOne()//deletes the connection 
+            .exec()
+            .then(function() {
+
+                console.log("we are removing this destination from your profile page")
+                resolve();          
+            })
+
+      //catches any errors if they happen
+        .catch((err) => {
+            return reject(err);
+                });
+        });
+    }
+
 }
 
 module.exports = UserProfile;
