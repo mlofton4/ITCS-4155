@@ -1,5 +1,7 @@
 let Previous = require('../models/previous')
 let PreviousSchema = require('../models/previousSchema')
+let ClassSchema = require('../models/classSchema')
+let Classinfo = require('../models/nextClass')
 var id = 0;
 class UserProfile{
 
@@ -88,6 +90,35 @@ class UserProfile{
 
                 console.log("we are removing this destination from your profile page")
                 resolve();          
+            })
+
+      //catches any errors if they happen
+        .catch((err) => {
+            return reject(err);
+                });
+        });
+    }
+
+    GetNextClass(){
+        return new Promise((resolve, result) => {
+            let thisHourDate = new Date()
+            let thisHour = thisHourDate.getHours()
+            ClassSchema.find({hour: thisHour})//finds the connection based on the ID
+            .then((data) => {
+            
+                console.log("we are finding the user's next class");
+
+                    let thisclass  = new Classinfo();
+                    //using the set properties for each connection 
+                    thisclass.setID(data.userid);
+                    thisclass.setname(data.name);
+                    thisclass.setday(data.day);
+                    thisclass.settime(data.time);
+                    thisclass.setbuilding(data.building);
+                    thisclass.sethour(data.hour);
+    
+                //resolve with the array 
+                resolve(nextClass);            
             })
 
       //catches any errors if they happen

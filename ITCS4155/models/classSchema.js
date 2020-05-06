@@ -8,12 +8,11 @@ var ClassSchema = new Schema({
         day: String,
         time: String,
         building: String,
-        hour: String
+        hour: Number
    
     });
 
 
 var Classes = db.model('Classes', ClassSchema);
-
 
 module.exports = Classes;

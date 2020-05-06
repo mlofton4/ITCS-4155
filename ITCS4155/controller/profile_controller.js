@@ -69,7 +69,7 @@ router.post('/', [
 //router for the profile page
 router.get('/', async function(req, res){
     if(global.signedin){
-let destinations = await PreviousDest.GetPrevious(global.userID)
+let destinations = await PreviousDest.GetPrevious(global.userID);
 
 var going = prompt("Are you going to class? Please type no or hit cancel, if you are not.", "Yes");
 if(going == null || going == ""){
@@ -78,7 +78,10 @@ if(going == null || going == ""){
 
 else{
 
-    
+    let find = await PreviousDest.GetNextClass();
+    global.building = find._building
+    console.log(global.building);
+    res.redirect('/recommendations?building=<%= global.building %>')
 }
     }
     else{

@@ -8,7 +8,7 @@ global.building = "";
 
 
 
-let d = require('./models/previousSchema');
+let d = require('./models/classSchema');
  //variable that will hold the name of the user once they sign in
 var app = express();
 
