@@ -5,6 +5,7 @@ let Classinfo = require('../models/nextClass')
 let Userinfo = require('../models/userinfo')
 let UserSchema = require('../models/userSchema')
 var id = 0;
+var thisID = 1400;
 class UserProfile{
 
     StorePrevious(userID, building){
@@ -19,11 +20,23 @@ class UserProfile{
             let hour = thisDay.getHours();
             let mins = thisDay.getMinutes();
             if(hour > 12){
-                hour = hour - 12; 
-                time = ("0" + hour + ":" + mins + "" + "PM");
+                hour = hour - 12;
+                if(mins < 10){
+                    time = ("0" + hour + ":" + "0" + mins + "" + "PM");
+                } 
+                else{
+                    time = ("0" + hour + ":" + mins + "" + "PM");
+                }
+                
             }
             else{
-                time = ("0" + hour + ":" + mins + "" + "AM");
+                if(mins < 10){
+                    time = ("0" + hour + ":" + "0" + mins + "" + "PM");
+                } 
+                else{
+                    time = ("0" + hour + ":" + mins + "" + "AM");
+                }
+                
             }
 
             PreviousSchema.find({userid: userID, destid : id})
@@ -170,7 +183,77 @@ class UserProfile{
         return reject(err);
             });
         });
+    }
+
+        NewUser(classify, firstname, email, username, password){
+            return new Promise((resolve, result) => {
+                
+                //finds all docuemnts with the userID and connectionID
+                UserSchema.findById({thisID})
+                .then((data) => {
+    
+                    
+                    //if there has not already been a connection added with the connectionID to the user with the userID, then this function adds the connection
+                    if(data.length == 0 ){
+    
+                        console.log("we are adding the user to the database");
+    
+                        var newUse = new UserSchema({_id: thisID, classification: classify, firstname: firstname, email:email, username:username, password: password}) //adds connection to the user connections model
+    
+                        newUse.save(function(err){//saves the connection
+                            if(err)return console.error(err);
+                        });
+
+                        thisID = thisID + 100;
+                       
+                    }
+    
+                    resolve(newUse);
+                })
+    
+                
+            //catches any errors if they happen
+            .catch((err) => {
+                return reject(err);
+                    });
+                });
+        
+        }
+
+        NewClasses(userID, name, day, time, building){
+            return new Promise((resolve, result) => {
+                //finds all docuemnts with the 
+                ClassSchema.findById({userid: userID, day: day, time:time})
+                .then((data) => {
+    
+                    
+                    //if there has not already been a connection added with the connectionID to the user with the userID, then this function adds the connection
+                    if(data.length == 0 ){
+    
+                        console.log("we are adding this class to the database");
+    
+                        var newClass = new ClassSchema({userid: userID, name: name, day: day, time:time, building:building}) //adds connection to the user connections model
+    
+                        newClass.save(function(err){//saves the connection
+                            if(err)return console.error(err);
+                        });
+                       
+                    }
+    
+                    resolve(newClass);
+                })
+    
+                
+            //catches any errors if they happen
+            .catch((err) => {
+                return reject(err);
+                    });
+                });
+        
+        }
+
+
 
     }
-}
+
 module.exports = UserProfile;

@@ -21,10 +21,10 @@
 <form action="/" method="POST">
     <div class="signup">Welcome to ParkEasy (required)</div>
     <div class="signup-form">
-        <input type="text" placeholder="Type your First Name Here" class="input"><br>
-        <input type="text" placeholder="Type your Email Here" class="input"><br>
-        <input type="text" placeholder="Type your Username Here" class="input"><br>
-        <input type="password" placeholder="Type your Password Here" class="input"><br>
+        <input type="text" id="firstname" name="firstname" placeholder="Type your First Name Here" class="input"><br>
+        <input type="text" id="email" name="email" placeholder="Type your Email Here" class="input"><br>
+        <input type="text" id="username" name="password" placeholder="Type your Username Here" class="input"><br>
+        <input type="password" id="pass" name="pass" placeholder="Type your Password Here" class="input"><br>
          <!--Information needed to get the user's classification-->
         <label class="labelclass" for="classify">Choose your classification</label>
         <select name="classify" id="classify">
@@ -71,7 +71,7 @@
         </select>
         <label for="classname1">Name of Class:</label>
         <input type="text" id="classname1" name="classname1">
-        <label for="classday1">Day of Class:</label>
+        <label for="classday1">Day/Days of Class:</label>
         <select name="classday1" id="classday1">
             <option value="Monday" selected>Monday</option>
             <option value="Tuesday">Tuesday</option>
@@ -79,6 +79,9 @@
             <option value="Thursday">Thursday</option>
             <option value="Friday">Friday</option>
             <option value="Saturday">Saturday</option>
+            <option value="MonWedFri">Mon/Wed/Fri</option>
+            <option value="Tues/Thurs">Tues/Thurs</option>
+            <option value="Mon/Wed">Mon/Wed</option>
         </select>
     </fieldset>
      <!--Information needed for class 2-->
@@ -118,7 +121,7 @@
         </select>
         <label for="classname2">Name of Class:</label>
         <input type="text" id="classname2" name="classname2">
-        <label for="classday2">Day of Class:</label>
+        <label for="classday2">Day/Days of Class:</label>
         <select name="classday2" id="classday2">
         <option value="Monday" selected>Monday</option>
         <option value="Tuesday">Tuesday</option>
@@ -126,6 +129,9 @@
         <option value="Thursday">Thursday</option>
         <option value="Friday">Friday</option>
         <option value="Saturday">Saturday</option>
+        <option value="MonWedFri">Mon/Wed/Fri</option>
+        <option value="Tues/Thurs">Tues/Thurs</option>
+        <option value="Mon/Wed">Mon/Wed</option>
     </select><br>
     </fieldset>
      <!--Information needed for class 3-->
@@ -165,7 +171,7 @@
         </select>
         <label for="classtime3">Name of Class:</label>
         <input type="text" id="classname3" name="classname3">
-        <label for="classday3">Day of Class:</label>
+        <label for="classday3">Day/Days of Class:</label>
         <select name="classday3" id="classday3">
         <option value="Monday" selected>Monday</option>
         <option value="Tuesday">Tuesday</option>
@@ -173,6 +179,9 @@
         <option value="Thursday">Thursday</option>
         <option value="Friday">Friday</option>
         <option value="Saturday">Saturday</option>
+        <option value="MonWedFri">Mon/Wed/Fri</option>
+        <option value="Tues/Thurs">Tues/Thurs</option>
+        <option value="Mon/Wed">Mon/Wed</option>
     </select><br>
     </fieldset>
      <!--Information needed for class 4-->
@@ -212,7 +221,7 @@
         </select>
         <label for="classname4">Name of Class:</label>
         <input type="text" id="classname4" name="classname4">
-        <label for="classday4">Day of Class:</label>
+        <label for="classday4">Day/Days of Class:</label>
         <select name="classday4" id="classday4">
         <option value="Monday" selected>Monday</option>
         <option value="Tuesday">Tuesday</option>
@@ -220,6 +229,9 @@
         <option value="Thursday">Thursday</option>
         <option value="Friday">Friday</option>
         <option value="Saturday">Saturday</option>
+        <option value="MonWedFri">Mon/Wed/Fri</option>
+        <option value="Tues/Thurs">Tues/Thurs</option>
+        <option value="Mon/Wed">Mon/Wed</option>
     </select><br>
     </fieldset>
      <!--Information needed for class 5-->
@@ -259,7 +271,7 @@
         </select>
         <label for="classname5">Name of Class:</label>
         <input type="text" id="classname5" name="classname5">
-        <label for="classday5">Day of Class:</label>
+        <label for="classday5">Day/Days of Class:</label>
         <select name="classday5" id="classday5">
         <option value="Monday" selected>Monday</option>
         <option value="Tuesday">Tuesday</option>
@@ -267,6 +279,9 @@
         <option value="Thursday">Thursday</option>
         <option value="Friday">Friday</option>
         <option value="Saturday">Saturday</option>
+        <option value="MonWedFri">Mon/Wed/Fri</option>
+        <option value="Tues/Thurs">Tues/Thurs</option>
+        <option value="Mon/Wed">Mon/Wed</option>
     </select><br>
     </fieldset>
     <!--Information needed for class 6-->
@@ -306,7 +321,7 @@
         </select>
         <label for="classname6">Name of Class:</label>
         <input type="text" id="classname6" name="classname6">
-        <label for="classday6">Day of Class:</label>
+        <label for="classday6">Day/Days of Class:</label>
         <select name="classday6" id="classday6">
         <option value="Monday" selected>Monday</option>
         <option value="Tuesday">Tuesday</option>
@@ -314,6 +329,9 @@
         <option value="Thursday">Thursday</option>
         <option value="Friday">Friday</option>
         <option value="Saturday">Saturday</option>
+        <option value="MonWedFri">Mon/Wed/Fri</option>
+        <option value="Tues/Thurs">Tues/Thurs</option>
+        <option value="Mon/Wed">Mon/Wed</option>
     </select><br>
     </fieldset>
         <label><br>
