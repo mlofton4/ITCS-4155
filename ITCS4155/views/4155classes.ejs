@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>Classes</title>
+    <meta name="description" content="ParkEasy"/>
+	<meta charset="UTF-8">
+	<link rel="stylesheet" type="text/css" href="../assets/stylesheets/Style2.css" />
+
+
+</head>
+<body>
+<!-- Creates the user navigation bar -->
+<div class="usernavbar">
+        <a href="/login/logout">Log Out</a>
+        <a href="/classes">My Classes</a>
+        <a href="/previous">Previous Locations</a>
+        <a href="/">Home</a>
+  </div>
+<main>
+<h2><%= global.name %>'s Classes</h2>
+<table>
+	<!-- Creates a table that will hold the sessions selected by the user-->
+	<tr>
+		<th>Name of Class</th>
+		<th>Day of Class</th>
+		<th>Time of Class</th>
+		<th>Building</th>
+		<th>Recommendations</th>
+	</tr>
+	<%if (typeof qs != 'undefined'){ %>
+		<% for(let i=0; i< qs.length; i++){ %>
+			<tr>
+				<td><%= qs[i]._name %></td>
+				<td><%= qs[i]._day %></td>
+                <td><%= qs[i]._time %></td>
+                <td><%= qs[i]._building %></td>
+				<td><a href="/recommendations?building=qs[i]._building%>" class="recbutton" id="recbut" role="button">Get Recommendations</a></td>
+			</tr>
+		<%}%>
+	<%}%>
+</table>
+</main>
+</body>
+</html>

@@ -18,14 +18,15 @@
       <a href="/">Home</a>
       <%}else{ %>
         <a href="/login/logout">Log Out</a>
-        <a href="/profile">My Profile</a>
+        <a href="/classes">My Classes</a>
+        <a href="/previous">Previous Locations</a>
         <a href="/">Home</a>
       <%} %>
   </div>
 <main>
      <!-- Creates the if the user is signed in, and if so, it will display the users name -->
   <% if (global.signedin == true) { %>
-    <p>Welcome <%= global.name %> !</p>
+    <p class="namehome">Welcome <%= global.name %> !</p>
     <%} %>
 <header class="homehead">ParkEasy</header><br>
 
@@ -62,6 +63,10 @@
             <option value="storrs">Storrs</option>
             <option value="win">Winningham</option>
         </select><br><br><br><br><br>
+        <% if (global.signedin == true) { %>
+            <p class="classlogged">You're classification is: <%= global.class %>!</p>
+            <%} %>
+            <% if(global.signedin !=true){%>
         <label for="classify">Classification</label>
         <select name="classify" id="classify">
             <option value="residential" selected>Residential</option>
@@ -69,6 +74,7 @@
             <option value="commuter">Commuter</option>
             <option value="visitor">Visitor</option>
         </select><br><br><br>
+        <%} %>
         <input type="submit" class="homesub" value="Click here to get our recommendation!!">
 </form>
 <h2 class="second">What's your Classification?</h2>
@@ -89,7 +95,6 @@
 	<%}%>    
 </table>
 
-<p class="thetime"><%= global.time%></p>
 
 <a href="/" class="updateA">Update</a>
 <p class="updateText">Click this button to update availability hours (will be updated at the start of each hour)</p>

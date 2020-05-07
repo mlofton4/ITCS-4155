@@ -5,7 +5,6 @@ class NextClass {
     this._day = day;
     this._time = time;
     this._building = building;
-    this._hour = hour;
     }//creates the class 
 
     
@@ -25,9 +24,6 @@ class NextClass {
     }
     getbuilding(){
         return this._building; //gets the building of the class
-    }
-    gethour(){
-        return this._hour; //gets the hour of the class
     }
 
 
@@ -53,9 +49,6 @@ class NextClass {
         this._building = thebuilding; //sets the building of the class
     }
     
-    sethour(thehour){
-        this._hour = thehour; //sets the hour of the class 
-    }
 
 }
 

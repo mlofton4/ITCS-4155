@@ -18,3 +18,6 @@ router.get('/', async function(req, res){
     }
 
 });
+
+ //exports the router
+ module.exports = router;

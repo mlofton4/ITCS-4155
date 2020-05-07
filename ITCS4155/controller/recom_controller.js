@@ -29,6 +29,8 @@ router.get('/', async function(req, res){
   
   if(global.signedin == true){
     let a = await Previous.StorePrevious(global.userID, global.building)
+    let user = await Previous.getUser(global.userID) 
+    global.class = user._classification
     }
 
     console.log(global.building);

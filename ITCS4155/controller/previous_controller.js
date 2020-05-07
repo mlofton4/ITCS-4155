@@ -62,7 +62,7 @@ router.post('/', [
   else{
   global.signedin = true; //sets the variable to true, allowing us to know that the user is signed in
 
-  res.redirect('/profile') //renders home
+  res.redirect('/previous') //renders home
   }
 });
 
@@ -84,7 +84,7 @@ router.get('/', async function(req, res){
 router.get('/delete', async function(req,res){
     let del = await PreviousDest.DeletePrevious(req.query.ID, global.userID); //deletes the previous destination from the user's profile
 
-    res.redirect('/profile'); //redirects the user back to savedConnections
+    res.redirect('/previous'); //redirects the user back to savedConnections
   });
 
 
