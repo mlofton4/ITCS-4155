@@ -18,8 +18,8 @@
 	<a href="/">Home</a>
 </div>
 <main>
-<h2><%= global.name %>'s Profile</h2>
-<table>
+<h2><%= global.name %>'s Previous Locations</h2>
+<table class="prevTable">
 	<!-- Creates a table that will hold the sessions selected by the user-->
 	<tr>
 		<th>Building</th>
@@ -34,7 +34,7 @@
 				<td><%= pro[i]._building %></td>
 				<td><%= pro[i]._date %></td>
 				<td><%= pro[i]._time %></td>
-				<td><a href="/recommendations?building=<%=pro[i]._building%>" class="recbutton" id="recbut" role="button">Get Recommendations</a></td>
+				<td><a href="/recommendations?building=<%=pro[i]._building%>" class="precbutton" id="recbut" role="button">Get Recommendations</a></td>
 				<td><a href="/previous/delete?ID=<%= pro[i]._ID %>" class="deletebutton" id="delete" role="button">Delete</a></td>
 			</tr>
 		<%}%>

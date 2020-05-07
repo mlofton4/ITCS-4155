@@ -177,3 +177,88 @@ td {
 .namehome{
   font-size: 30px;
 }
+
+.recbutton{
+  background-color: black;
+  border: none;
+  color: white;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 20px;
+  margin: 20px 20px;
+  cursor: pointer;
+  border-radius: 12px;
+  padding: 10px;
+}
+
+.precbutton{
+  background-color: black;
+  border: none;
+  color: white;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 30px;
+  margin: 30px 30px;
+  cursor: pointer;
+  border-radius: 12px;
+  padding: 20px;
+}
+
+.deletebutton{
+  background-color: red;
+  border: none;
+  color: white;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 30px;
+  margin: 30px 30px;
+  cursor: pointer;
+  border-radius: 12px;
+  padding: 20px;
+}
+
+.classTable{
+  font-family: arial, sans-serif;
+  font-size: 20px;
+  text-align: center;
+  position: absolute;
+  right: 570px;
+  top: 240px;
+}
+
+.classTable, th, td {
+  border: 1px solid black;
+}
+
+.classTable, td {
+  height: 50px;
+  vertical-align: bottom;
+}
+
+.prevTable{
+  font-family: arial, sans-serif;
+  font-size: 30px;
+  text-align: center;
+  position: absolute;
+  right: 490px;
+  top: 240px;
+}
+
+.prevTable, th, td {
+  border: 1px solid black;
+}
+
+.prevTable, td {
+  height: 50px;
+  vertical-align: bottom;
+}
+
+.classbooks{
+  width: 20%;
+	position: relative;
+  left: 750px;
+  top: 540px;
+}
