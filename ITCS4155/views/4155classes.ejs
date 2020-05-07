@@ -35,7 +35,7 @@
 				<td><%= qs[i]._day %></td>
                 <td><%= qs[i]._time %></td>
                 <td><%= qs[i]._building %></td>
-				<td><a href="/recommendations?building=qs[i]._building%>" class="recbutton" id="recbut" role="button">Get Recommendations</a></td>
+				<td><a href="/recommendations?building=<%=qs[i]._building%>" class="recbutton" id="recbut" role="button">Get Recommendations</a></td>
 			</tr>
 		<%}%>
 	<%}%>

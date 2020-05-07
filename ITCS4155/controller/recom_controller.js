@@ -23,6 +23,7 @@ router.post('/', async function(req, res){
 //router for the recommendations page
 router.get('/', async function(req, res){
   if(req.query.building != null){
+    console.log(req.query.building)
     global.building = req.query.building;
   }
 

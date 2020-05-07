@@ -34,7 +34,7 @@
 				<td><%= pro[i]._building %></td>
 				<td><%= pro[i]._date %></td>
 				<td><%= pro[i]._time %></td>
-				<td><a href="/recommendations?building=pro[i]._building%>" class="recbutton" id="recbut" role="button">Get Recommendations</a></td>
+				<td><a href="/recommendations?building=<%=pro[i]._building%>" class="recbutton" id="recbut" role="button">Get Recommendations</a></td>
 				<td><a href="/previous/delete?ID=<%= pro[i]._ID %>" class="deletebutton" id="delete" role="button">Delete</a></td>
 			</tr>
 		<%}%>
