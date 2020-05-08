@@ -5,7 +5,6 @@ let Hours = require('../models/hoursinfo')
 
 
 
-//console.log(connections);
 class Parking {
 
     FindBestParkingR(building){
@@ -15,10 +14,10 @@ class Parking {
             .then((data) => {
             
                 console.log("we are searching for the best options now");
-                let ResArray = []; //array that will hold the connections
-                data.forEach((option) => { //loops through the data and grabs all the connections
+                let ResArray = []; //array that will hold the options
+                data.forEach((option) => { //loops through the data and grabs all the optiond
                 let thisoption  = new ParkingOption();
-                //using the set properties for each connection 
+                //using the set properties for each option 
                 thisoption.setname(option.name);
                 thisoption.setspace(option.space);
                 thisoption.setdistanceFrom(option.distanceFrom);
@@ -49,10 +48,10 @@ class Parking {
             .then((data) => {
             
                 console.log("we are searching for the best options now");
-                let ResArray = []; //array that will hold the connections
-                data.forEach((option) => { //loops through the data and grabs all the connections
+                let ResArray = []; //array that will hold the hours
+                data.forEach((option) => { //loops through the data and grabs all the hours
                 let thisoption  = new ParkingOption();
-                //using the set properties for each connection 
+                //using the set properties for each option 
                 thisoption.setname(option.name);
                 thisoption.setspace(option.space);
                 thisoption.setdistanceFrom(option.distanceFrom);
@@ -83,10 +82,10 @@ class Parking {
             .then((data) => {
             
                 console.log("we are searching for the best options now");
-                let ResArray = []; //array that will hold the connections
-                data.forEach((option) => { //loops through the data and grabs all the connections
+                let ResArray = []; //array that will hold the array info
+                data.forEach((option) => { //loops through the data and grabs all the hours
                 let thisoption  = new ParkingOption();
-                //using the set properties for each connection 
+                //using the set properties for each hour
                 thisoption.setname(option.name);
                 thisoption.setspace(option.space);
                 thisoption.setdistanceFrom(option.distanceFrom);
@@ -117,10 +116,10 @@ class Parking {
             .then((data) => {
             
                 console.log("we are searching for the best options now");
-                let ResArray = []; //array that will hold the connections
-                data.forEach((option) => { //loops through the data and grabs all the connections
+                let ResArray = []; //array that will hold the array info
+                data.forEach((option) => { //loops through the data and grabs all the options
                 let thisoption  = new ParkingOption();
-                //using the set properties for each connection 
+                //using the set properties for each option
                 thisoption.setname(option.name);
                 thisoption.setspace(option.space);
                 thisoption.setdistanceFrom(option.distanceFrom);
@@ -152,10 +151,10 @@ class Parking {
             .then((data) => {
                 
                 console.log("we are listing all decks within the hour");
-                let HourArray = []; //array that will hold the connections
-                data.forEach((option) => { //loops through the data and grabs all the connections
+                let HourArray = []; //array that will hold the hours
+                data.forEach((option) => { //loops through the data and grabs all the hours
                 let thishour  = new Hours();
-                //using the set properties for each connection 
+                //using the set properties for each hour 
                 thishour.setname(option.name);
                 thishour.sethour(option.hour)
                 thishour.setpercentfull(option.percentFull);
