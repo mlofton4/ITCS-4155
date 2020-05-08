@@ -4,11 +4,10 @@ let ClassSchema = require('../models/classSchema')
 let Classinfo = require('../models/nextClass')
 let Userinfo = require('../models/userinfo')
 let UserSchema = require('../models/userSchema')
-var id = 0;
 var thisID = 1400;
 class UserProfile{
 
-    StorePrevious(userID, building){
+    StorePrevious(userID, building, id){
 
         return new Promise((resolve, result)=> {
             let thisDay = new Date()
@@ -47,7 +46,6 @@ class UserProfile{
                     console.log("we are storing this destination");
                     //creates the new connection and stores in the database 
                     var previousDestination = new PreviousSchema({destid: id, userid: userID, date: date, time: time, building: building});
-                    id++;
                     //saves the new connection
                     previousDestination.save(function(err){
                         if(err)return console.error(err);
